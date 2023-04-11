@@ -3,6 +3,9 @@ const { Registerationmodel } = require("../models/User.model");
 const { hashing } = require("../middlewares/hashing")
 const bcrypt = require("bcrypt");
 const jwt = require('jsonwebtoken');
+const express = require("express");
+
+userRoute.use(express.json());
 
 // User registration endpoint
 userRoute.post("/register", hashing, async (req, res) => {
