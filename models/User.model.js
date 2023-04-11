@@ -9,19 +9,11 @@ const registrationSchema = mongoose.Schema({
   email: {
     type: String,
     unique: true,
-    required: true,
-    match: [
-      /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
-      "Please provide a valid email address",
-    ],
+    required: true
   },
   password: {
     type: String,
-    required: true,
-    match: [
-      /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/,
-      "Password must contain at least one digit, one lowercase letter, one uppercase letter, and must be at least 8 characters long",
-    ],
+    required: true
   },
 });
 
