@@ -76,9 +76,8 @@ cartRoute.post("/", async (req, res) => {
 // Route to delete an item from cart
 cartRoute.delete("/:id", async (req, res) => {
   let id = req.params.id;
-  let data = await Cartmodel.find({userID: req.body.userID, productid: id});
   try {
-    await Cartmodel.findByIdAndDelete(data[0]._id);
+    await Cartmodel.findByIdAndDelete(id);
     res.status(200).json({message: "Product Deleted"});
   } catch (error) {
     console.log(error)
