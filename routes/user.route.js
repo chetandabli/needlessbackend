@@ -23,6 +23,7 @@ userRoute.post("/register", hashing, async (req, res) => {
 // User login endpoint
 userRoute.post("/login", async (req, res) => {
   let { email, password } = req.body;
+  console.log(email, password)
   try {
     const userData = await Registerationmodel.findOne({email});
     if(userData.length != 0){
