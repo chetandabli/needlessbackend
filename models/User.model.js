@@ -18,7 +18,7 @@ const registrationSchema = mongoose.Schema({
 });
 
 // Creating a model using the schema
-const RegistrationModel = mongoose.model("user", registrationSchema);
+const Registerationmodel = mongoose.model("user", registrationSchema);
 
 // Exporting the model
-module.exports = { RegistrationModel };
+module.exports = { Registerationmodel };
